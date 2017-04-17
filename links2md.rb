@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 # ![https://github.com/nosir/cleave.js](https://img.shields.io/github/stars/nosir/cleave.js.svg?style=social&label=Star) https://github.com/nosir/cleave.js
 require 'uri'
 
@@ -24,3 +26,17 @@ links.strip.split("\n").each do |line|
   user = uri.path[1..-1]
   puts "1. ![#{uri}](https://img.shields.io/github/stars/#{user}.svg?style=social&label=Star) #{uri}"
 end
+
+puts
+puts '<ol>'
+
+links.strip.split("\n").each do |line|
+  puts '  <li>'
+  uri = URI(line)
+  user = uri.path[1..-1]
+  puts %(    <img src="https://img.shields.io/github/stars/#{user}.svg?style=social&label=Star">)
+  puts %(    <a href="#{uri}">#{uri}</a>)
+  puts '  </li>'
+end
+
+puts '</ol>'
