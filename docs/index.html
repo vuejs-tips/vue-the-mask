@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>The Mask for Vue.js</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css">
+  <link href="./client.728136f7.css" rel="stylesheet"></head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">vue-the-mask</h1>
+      <h2 class="project-tagline">The Mask input for Vue.js</h2>
+      <a href="http://github.com/vuejs-tips/vue-the-mask" class="btn">View on GitHub</a>
+    </section>
+
+    <section class="main-content">
+      <h2>The Mask input for Vue.js</h2>
+
+      <p>A lightweight (2KB gziped) mask input created specific for Vue.js</p>
+
+      <div id="app">
+        loading...
+      </div>
+
+      <h2>What about currency?</h2>
+      <p>
+        We understand that money format is a totally different domain, which needs another specific component. Stay tunned.
+      </p>
+      <h3>Install</h3>
+
+      <p class="language-shell highlighter-rouge"><pre class="highlight"><code>yarn add vue-the-mask
+or
+npm i -S vue-the-mask
+</code></pre></p>
+
+      <h3>Usage</h3>
+
+      <p class="language-javascript highlighter-rouge"><pre class="highlight"><code>// Global
+import VueTheMask from 'vue-the-mask'
+Vue.use(VueTheMask)
+
+// Local
+import TheMask from 'vue-the-mask'
+export default {
+  components: {TheMask}
+}
+</code></pre></p>
+
+      <h1>Properties</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Property</th> <th>Required</th> <th>Type</th> <th>Default</th> <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr> <td>value</td> <td>false</td> <td>String</td> <td></td> <td>Input value or v-model</td> </tr>
+          <tr> <td><b>mask</b></td> <td><b>true</b></td> <td>String, Function, Array</td> <td></td> <td>Mask pattern</td> </tr>
+          <tr> <td>masked</td> <td>false</td> <td>Boolean</td> <td>false</td> <td>emit value with mask chars, default is raw</td> </tr>
+          <tr> <td>placeholder</td> <td>false</td> <td>String</td> <td></td> <td>Same as html input</td> </tr>
+          <tr> <td>type</td> <td>false</td> <td>String</td> <td>'text'</td> <td>Input type (email, tel, number, ...)</td> </tr>
+          <tr> <td>tokens</td> <td>false</td> <td>Object</td> <td><a href="#tokens">tokens</a></td> <td>Custom tokens for mask</td> </tr>
+        </tbody>
+      </table>
+
+      <h1>Other Solutions</h1>
+
+      <ol>
+        <li><a href="https://github.com/nosir/cleave.js">https://github.com/nosir/cleave.js</a></li>
+        <li><a href="https://github.com/text-mask/text-mask">https://github.com/text-mask/text-mask</a></li>
+        <li><a href="https://github.com/igorescobar/jQuery-Mask-Plugin">https://github.com/igorescobar/jQuery-Mask-Plugin</a></li>
+        <li><a href="https://github.com/fernandofleury/vanilla-masker">https://github.com/fernandofleury/vanilla-masker</a></li>
+        <li><a href="https://github.com/probil/v-mask">https://github.com/probil/v-mask</a></li>
+        <li><a href="https://github.com/niksmr/vue-masked-input">https://github.com/niksmr/vue-masked-input</a></li>
+        <li><a href="https://github.com/moip/awesome-mask">https://github.com/moip/awesome-mask</a></li>
+        <li><a href="https://github.com/angular-ui/ui-mask">https://github.com/angular-ui/ui-mask</a></li>
+        <li><a href="https://github.com/insin/inputmask-core">https://github.com/insin/inputmask-core</a></li>
+        <li><a href="https://github.com/romulobrasil/PureMask.js">https://github.com/romulobrasil/PureMask.js</a></li>
+        <li><a href="https://github.com/the-darc/string-mask">https://github.com/the-darc/string-mask</a></li>
+        <li><a href="https://www.npmjs.com/package/di-vue-mask">https://www.npmjs.com/package/di-vue-mask</a></li>
+      </ol>
+
+      <h1>Currency</h1>
+
+      <ol>
+        <li><a href="https://github.com/kevinongko/vue-numeric">https://github.com/kevinongko/vue-numeric</a></li>
+        <li><a href="https://github.com/flaviosilveira/Jquery-Price-Format">https://github.com/flaviosilveira/Jquery-Price-Format</a></li>
+        <li><a href="https://github.com/plentz/jquery-maskmoney">https://github.com/plentz/jquery-maskmoney</a></li>
+      </ol>
+
+      <p>
+        Suggest another one here.
+      </p>
+    </section>
+
+  <script type="text/javascript" src="./client.6f7f5634.js"></script></body>
+</html>
