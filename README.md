@@ -43,14 +43,14 @@ export default {
 
 ## Properties
 
-|   Property  | Required | Type                    | Default | Description                                |
-|:-----------:|----------|-------------------------|---------|--------------------------------------------|
+| Property    | Required | Type                    | Default | Description                                |
+|-------------|----------|-------------------------|---------|--------------------------------------------|
 | value       | false    | String                  |         | Input value or v-model                     |
-| mask        | **true**     | String, Function, Array |         | Mask pattern                               |
+| mask        | **true** | String, Function, Array |         | Mask pattern                               |
 | masked      | false    | Boolean                 | false   | emit value with mask chars, default is raw |
 | placeholder | false    | String                  |         | Same as html input                         |
 | type        | false    | String                  | 'text'  | Input type (email, tel, number, ...)       |
-| tokens      | false    | Object                  | [tokens](#tokens) | Custom tokens for mask                     |
+| tokens      | false    | Object                  | [tokens](#tokens) | Custom tokens for mask           |
 
 ## What about currency?
 
