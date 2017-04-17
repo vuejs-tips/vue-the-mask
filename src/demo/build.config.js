@@ -7,7 +7,7 @@ module.exports = {
   webpack: {
     devtool: false, // disable source-map
     output: {
-      publicPath: '.', // generate client.*.js relative to ./demo/index.html
+      publicPath: '', // generate client.*.js relative to ./demo/index.html
     }
   }
 }
