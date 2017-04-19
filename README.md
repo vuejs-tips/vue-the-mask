@@ -1,6 +1,6 @@
 # The Mask
 
-A lightweight (2KB gziped) and dependency free mask input created specific for Vue.js
+A lightweight (2KB gzipped) and dependency free mask input created specific for Vue.js
 
 ## [Docs and Demo](https://vuejs-tips.github.io/vue-the-mask)
 
