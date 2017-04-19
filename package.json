@@ -1,6 +1,6 @@
 {
   "name": "vue-the-mask",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Tiny (2KB) and dependency free mask input for Vue.js",
   "main": "index.js",
   "scripts": {
@@ -15,6 +15,9 @@
     "dev": "vue build --host 0.0.0.0 ./src/demo/demo.vue --config ./src/demo/build.config.js",
     "install-global-dependencies": "yarn global add selenium-standalone@latest && selenium-standalone install"
   },
+  "files": [
+    "dist/"
+  ],
   "keywords": ["vue", "mask"],
   "author": "Marcos Neves <marcos.neves@gmail.com> (https://vuejs-tips.github.io/)",
   "license": "MIT",
