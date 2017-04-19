@@ -4,6 +4,10 @@ A lightweight (2KB gziped) and dependency free mask input created specific for V
 
 ## [Docs and Demo](https://vuejs-tips.github.io/vue-the-mask)
 
+### [JsFiddle](https://jsfiddle.net/neves/r8cL3msn/1/)
+
+![The Mask Heart](img/the-mask-heart.gif)
+
 ## Install
 
 ```
@@ -41,6 +45,8 @@ export default {
 '!': {escape: true}
 ```
 
+![The Mask Money](img/the-mask-hammer.gif)
+
 ## Properties
 
 | Property    | Required | Type                    | Default | Description                                |
@@ -52,9 +58,11 @@ export default {
 | type        | false    | String                  | 'text'  | Input type (email, tel, number, ...)       |
 | tokens      | false    | Object                  | [tokens](#tokens) | Custom tokens for mask           |
 
-## What about currency?
+## What about money?
 
 We understand that money format is a totally different domain, which needs another specific component. Stay tunned.
+
+![The Mask Money](img/the-mask-money.gif)
 
 ## Other Solutions
 
@@ -76,3 +84,15 @@ We understand that money format is a totally different domain, which needs anoth
 1. ![https://github.com/plentz/jquery-maskmoney](https://img.shields.io/github/stars/plentz/jquery-maskmoney.svg?style=social&label=Star) https://github.com/plentz/jquery-maskmoney
 1. ![https://github.com/flaviosilveira/Jquery-Price-Format](https://img.shields.io/github/stars/flaviosilveira/Jquery-Price-Format.svg?style=social&label=Star) https://github.com/flaviosilveira/Jquery-Price-Format
 1. ![https://github.com/kevinongko/vue-numeric](https://img.shields.io/github/stars/kevinongko/vue-numeric.svg?style=social&label=Star) https://github.com/kevinongko/vue-numeric
+
+### [Suggest another one here](https://github.com/vuejs-tips/vue-the-mask/issues/new?title=Library+Suggestion)
+
+## Contribution
+
+You're free to contribute to this project by submitting [issues](https://github.com/vuejs-tips/v-tag-input.svg/issues) and/or [pull requests](https://github.com/vuejs-tips/v-tag-input.svg/pulls). This project is test-driven, so keep in mind that every change and new feature should be covered by tests. Your name will be added to the hall of fame ;)
+
+![The Mask Wolf](img/the-mask-wolf.gif)
+
+## License
+
+This project is licensed under [MIT License](http://en.wikipedia.org/wiki/MIT_License)
