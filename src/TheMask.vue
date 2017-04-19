@@ -11,7 +11,7 @@ import dynamicMask from './dynamic-mask'
 import tokens from './tokens'
 
 export default {
-  name: 'MaskInput',
+  name: 'TheMask',
   props: {
     value: String,
     mask: {

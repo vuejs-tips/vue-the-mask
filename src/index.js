@@ -1,12 +1,10 @@
-import tokens from './tokens'
-import TheMask from './TheMask.vue'
+const tokens = require('./tokens')
+const TheMask = require('./TheMask.vue')
 
 const Component = {
   tokens,
   TheMask,
-  install (Vue) {
-    Vue => Vue.component(TheMask.name, TheMask)
-  },
+  install: Vue => Vue.component(TheMask.name, TheMask),
   version: proccess.env.VERSION
 }
 
