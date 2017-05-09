@@ -8,12 +8,12 @@
     "build:demo": "vue build ./src/demo/demo.vue --config ./src/demo/build.config.js --dist ./docs/ --prod",
     "demo:serve": "serve ./",
     "compile": "npm run build -- --disable-compress",
-    "start-fixture": "vue build ./test/fixture.vue",
-    "start-selenium": "selenium-standalone start",
     "test:unit": "jest",
-    "test:e2e": "nightwatch ./test/nightwatch.js",
-    "dev": "vue build --host 0.0.0.0 ./src/demo/demo.vue --config ./src/demo/build.config.js",
-    "install-global-dependencies": "yarn global add selenium-standalone@latest && selenium-standalone install"
+    "e2e:install-global-dependencies": "yarn global add selenium-standalone@latest && selenium-standalone install",
+    "e2e:start-fixture": "vue build ./test/fixture.vue",
+    "e2e:start-selenium": "selenium-standalone start",
+    "e2e:run": "nightwatch ./test/nightwatch.js",
+    "dev": "vue build --host 0.0.0.0 ./src/demo/demo.vue --config ./src/demo/build.config.js"
   },
   "files": [
     "dist/"
