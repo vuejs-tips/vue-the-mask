@@ -6,7 +6,7 @@ A lightweight (2KB gzipped) and dependency free mask input created specific for 
 
 ### [JsFiddle](https://jsfiddle.net/neves/r8cL3msn/1/)
 
-![The Mask Heart](img/the-mask-heart.gif)
+![The Mask Heart](https://raw.githubusercontent.com/vuejs-tips/vue-the-mask/master/img/the-mask-heart.gif)
 
 ## Install
 
@@ -45,7 +45,7 @@ export default {
 '!': {escape: true}
 ```
 
-![The Mask Money](img/the-mask-hammer.gif)
+![The Mask Money](https://raw.githubusercontent.com/vuejs-tips/vue-the-mask/master/img/the-mask-hammer.gif)
 
 ## Properties
 
@@ -62,7 +62,7 @@ export default {
 
 We understand that money format is a totally different domain, which needs another specific component. Stay tunned.
 
-![The Mask Money](img/the-mask-money.gif)
+![The Mask Money](https://raw.githubusercontent.com/vuejs-tips/vue-the-mask/master/img/the-mask-money.gif)
 
 ## Other Solutions
 
@@ -91,7 +91,7 @@ We understand that money format is a totally different domain, which needs anoth
 
 You're free to contribute to this project by submitting [issues](https://github.com/vuejs-tips/v-tag-input.svg/issues) and/or [pull requests](https://github.com/vuejs-tips/v-tag-input.svg/pulls). This project is test-driven, so keep in mind that every change and new feature should be covered by tests. Your name will be added to the hall of fame ;)
 
-![The Mask Wolf](img/the-mask-wolf.gif)
+![The Mask Wolf](https://raw.githubusercontent.com/vuejs-tips/vue-the-mask/master/img/the-mask-wolf.gif)
 
 ## License
 
