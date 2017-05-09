@@ -1,6 +1,6 @@
 {
   "name": "vue-the-mask",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Tiny (2KB) and dependency free mask input for Vue.js",
   "main": "dist/vue-the-mask.js",
   "scripts": {
