@@ -80,8 +80,11 @@ export default {
     refresh (newValue = '') {
       var position = this.getPosition() // save position before setDisplay
       this.setDisplay(this.masker(newValue, this.convertedMask, true, this.tokens)) // set display with mask, cursor goes to end
+      var oldResult = this.result
       this.result = this.masker(newValue, this.convertedMask, this.masked, this.tokens) // emit masked or raw
-      this.$emit('input', this.result)
+      if (oldResult != this.result) { // emit only if changed
+        this.$emit('input', this.result)
+      }
 
       var subNewValue = newValue.substring(0, position)
       var subDisplay = this.getDisplay().substring(0, position)
