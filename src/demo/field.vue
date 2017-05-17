@@ -19,12 +19,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.ui.form {
-  .inline.field {
-    label {
-      width: 90px;
-    }
-  }
+<style lang="css">
+.ui.form .inline.field label {
+  width: 90px;
 }
 </style>

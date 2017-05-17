@@ -5,7 +5,7 @@
   "main": "dist/vue-the-mask.js",
   "scripts": {
     "build": "vue build ./src/index.js --config ./build.config.js --dist ./dist/ --prod --lib",
-    "build:demo": "vue build ./src/demo/demo.vue --config ./src/demo/build.config.js --dist ./docs/ --prod",
+    "build:demo": "vue build ./src/demo/ --config ./src/demo/build.config.js --dist ./docs/ --prod",
     "demo:serve": "serve ./",
     "compile": "npm run build -- --disable-compress",
     "test:unit": "jest",
@@ -26,7 +26,7 @@
   "license": "MIT",
   "devDependencies": {
     "babel-jest": "^19.0.0",
-    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-vue-app": "^1.2.0",
     "jest": "^19.0.2",
     "nightwatch": "^0.9.12",
     "vue": "^2.3.0",
