@@ -84,15 +84,15 @@ export default {
       this.result = this.masker(newValue, this.convertedMask, this.masked, this.tokens) // emit masked or raw
       if (oldResult != this.result) { // emit only if changed
         this.$emit('input', this.result)
-      }
 
-      var subNewValue = newValue.substring(0, position)
-      var subDisplay = this.getDisplay().substring(0, position)
-      if (subNewValue !== subDisplay) {
-        var digit = subNewValue[position-1] // fix double char position bug: (44| + 9 => (44) 9|
-        while (position < this.getDisplay().length // avoid infinite loop
-               && this.getDisplay().charAt(position-1) !== digit) {
-          position++
+        var subNewValue = newValue.substring(0, position)
+        var subDisplay = this.getDisplay().substring(0, position)
+        if (subNewValue !== subDisplay) {
+          var digit = subNewValue[position-1] // fix double char position bug: (44| + 9 => (44) 9|
+          while (position < this.getDisplay().length // avoid infinite loop
+                 && this.getDisplay().charAt(position-1) !== digit) {
+            position++
+          }
         }
       }
       this.setPosition(position)
@@ -105,7 +105,13 @@ export default {
 
     // can't use computed because vue caches it
     getPosition () { return this.$el.selectionEnd || 0 },
-    setPosition (p) { this.$el.setSelectionRange(p, p); this.emitCursor() },
+    setPosition (p) {
+      // update cursor only if the input has focus
+      if (this.$el === document.activeElement) {
+        this.$el.setSelectionRange(p, p);
+        this.emitCursor()
+      }
+    },
     getDisplay () { return this.$el.value || '' },
     setDisplay (v) { this.$el.value = v }
   }
