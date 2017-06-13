@@ -68,7 +68,7 @@ export default {
     },
 
     convertedMask () {
-      return Array.isArray(this.mask) ? dynamicMask(this.mask, this.tokens) : this.mask
+      return Array.isArray(this.mask) ? dynamicMask(maskit, this.mask, this.tokens) : this.mask
     },
 
     masker () {

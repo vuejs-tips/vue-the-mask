@@ -4,6 +4,9 @@ const {name, version} = require('./package.json')
 const demo = process.env.NODE_ENV === 'development' || process.env.npm_lifecycle_event === 'dist:demo'
 
 module.exports = {
+  babel: {
+    babelrc: false,
+  },
   // generate html only for dev and dist:demo
   html: demo,
   webpack: {

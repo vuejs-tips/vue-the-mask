@@ -81,7 +81,7 @@ We understand that money format is a totally different domain, which needs anoth
 
 ## Currency
 
-1. ![https://github.com/plentz/jquery-maskmoney](https://img.shields.io/github/stars/plentz/jquery-maskmoney.svg?style=social&label=Star) https://github.com/plentz/jquery-maskmoney
+1. ![https://github.com/vuejs-tips/v-money](https://img.shields.io/github/stars/vuejs-tips/v-money.svg?style=social&label=Star) https://github.com/vuejs-tips/v-money
 1. ![https://github.com/flaviosilveira/Jquery-Price-Format](https://img.shields.io/github/stars/flaviosilveira/Jquery-Price-Format.svg?style=social&label=Star) https://github.com/flaviosilveira/Jquery-Price-Format
 1. ![https://github.com/kevinongko/vue-numeric](https://img.shields.io/github/stars/kevinongko/vue-numeric.svg?style=social&label=Star) https://github.com/kevinongko/vue-numeric
 

@@ -81,6 +81,23 @@
 
     </div>
 
+    <div class="equal width fields">
+      <div class="field">
+        <p>
+          <field label="Bank Agency" :mask="['###', '###-#', '###-##']" :masked="masked"></field>
+        </p>
+        <pre>&lt;the-mask :mask="['###', '###-#', '###-##']" /&gt;</pre>
+      </div>
+
+      <div class="field">
+        <p>
+          <field label="Bank Account" :mask="['###-#', '####-#', '#####-#', '######-#']" :masked="masked"></field>
+        </p>
+        <pre>&lt;the-mask :mask="['###-#', '####-#', '#####-#', '######-#']" /&gt;</pre>
+      </div>
+
+    </div>
+
     <h4 class="ui dividing header">Custom Tokens (Creates token F to represent a hexadecimal [0-9A-F])</h4>
 
     <div>

@@ -1,6 +1,9 @@
 const path = require('path')
 
 module.exports = {
+  babel: {
+    babelrc: false,
+  },
   html: {
     template: path.resolve(__dirname, './layout.html')
   },
