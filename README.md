@@ -60,7 +60,7 @@ export default {
 
 ## What about money?
 
-We understand that money format is a totally different domain, which needs another specific component. Stay tunned.
+We understand that money format is a totally different domain, which needs another specific component. You can use https://github.com/vuejs-tips/v-money
 
 ![The Mask Money](https://raw.githubusercontent.com/vuejs-tips/vue-the-mask/master/img/the-mask-money.gif)
 
