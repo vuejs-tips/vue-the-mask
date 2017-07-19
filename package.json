@@ -4,6 +4,8 @@
   "description": "Tiny (2KB) and dependency free mask input for Vue.js",
   "main": "dist/vue-the-mask.js",
   "scripts": {
+    "upgrade:check": "ncu",
+    "upgrade:apply": "ncu -a",
     "build": "vue build ./src/index.js --config ./build.config.js --dist ./dist/ --prod --lib",
     "build:demo": "vue build ./src/demo/ --config ./src/demo/build.config.js --dist ./docs/ --prod",
     "demo:serve": "serve ./",
@@ -25,11 +27,11 @@
   "author": "Marcos Neves <marcos.neves@gmail.com> (https://vuejs-tips.github.io/)",
   "license": "MIT",
   "devDependencies": {
-    "babel-jest": "^19.0.0",
+    "babel-jest": "^20.0.3",
     "babel-preset-vue-app": "^1.2.0",
-    "jest": "^19.0.2",
-    "nightwatch": "^0.9.12",
-    "vue": "^2.3.0",
-    "vue-template-compiler": "^2.3.0"
+    "jest": "^20.0.4",
+    "nightwatch": "^0.9.16",
+    "vue": "^2.4.1",
+    "vue-template-compiler": "^2.4.1"
   }
 }
