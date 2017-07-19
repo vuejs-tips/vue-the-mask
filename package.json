@@ -10,7 +10,7 @@
     "build:demo": "vue build ./src/demo/ --config ./src/demo/build.config.js --dist ./docs/ --prod",
     "demo:serve": "serve ./",
     "compile": "npm run build -- --disable-compress",
-    "test:unit": "jest",
+    "test": "jest",
     "e2e:install-global-dependencies": "yarn global add selenium-standalone@latest && selenium-standalone install",
     "e2e:start-fixture": "vue build ./test/fixture.vue --host 0.0.0.0",
     "e2e:start-selenium": "selenium-standalone start",
