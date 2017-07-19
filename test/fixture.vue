@@ -1,6 +1,6 @@
 <template>
 <div>
-  <the-mask ref="input" id="input" v-model="input" @cursor="cursor = arguments[0]" mask="##.##.##) ##)"></the-mask>
+  <the-mask ref="input" id="input" v-model="input" @cursor="cursor = arguments[0]" mask="+1 ##.##.##) ##)"></the-mask>
   <div id="cursor">{{cursor}}</div>
 
   <label class="label">MaxLength 3 (não permite adição após preencher)</label>

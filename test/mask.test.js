@@ -44,3 +44,11 @@ test('123 ##(#)', () => {
 test('123 #!#(#)', () => {
   expect(maskit('12', '#!#(#)', true, tokens)).toBe('1#(2)')
 })
+
+test('12 +1 #', () => {
+  expect(maskit('12', '+1 #', true, tokens)).toBe('+1 2')
+})
+
+test('2 +1 #', () => {
+  expect(maskit('2', '+1 #', true, tokens)).toBe('+1 2')
+})
