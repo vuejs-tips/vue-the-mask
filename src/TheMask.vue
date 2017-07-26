@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <input :type="type" @input="refresh($event.target.value)" :placeholder="placeholderOrMask">
 </template>
 
@@ -45,6 +45,7 @@ export default {
 
   watch: {
     value (newValue) {
+      newValue = (newValue === null || newValue === undefined) ? '' : newValue
       if (newValue === this.result) return // don't update if value is the same as last value
       this.refresh(newValue)
     },
@@ -85,7 +86,6 @@ export default {
       this.result = this.masker(newValue, this.convertedMask, this.masked, this.tokens) // emit masked or raw
       if (oldResult != this.result || oldDisplay != this.getDisplay()) { // emit only if changed
         this.$emit('input', this.result)
-
         var subNewValue = newValue.substring(0, position)
         var subDisplay = this.getDisplay().substring(0, position)
         if (subNewValue !== subDisplay) {
@@ -105,7 +105,7 @@ export default {
     },
 
     // can't use computed because vue caches it
-    getPosition () { return this.$el.selectionEnd || 0 },
+    getPosition () { return (this.$el && this.$el.selectionEnd) || 0 },
     setPosition (p) {
       // update cursor only if the input has focus
       if (this.$el === document.activeElement) {
@@ -113,7 +113,7 @@ export default {
         this.emitCursor()
       }
     },
-    getDisplay () { return this.$el.value || '' },
+    getDisplay () { return (this.$el && this.$el.value) || '' },
     setDisplay (v) { this.$el.value = v }
   }
 }
