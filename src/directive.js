@@ -10,7 +10,7 @@ function event (name) {
 export default function (el, binding) {
   var config = binding.value
 
-  el.oninput = el.oninput || function (evt) {
+  el.oninput = function (evt) {
     if (!evt.isTrusted) return // avoid infinite loop
     /*
     InputEvent (native)
@@ -37,6 +37,7 @@ export default function (el, binding) {
     el.setSelectionRange(position, position)
     el.dispatchEvent(event('input'))
   }
+
   var newDisplay = maskit(el.value, config.mask, true, config.tokens)
   if (newDisplay !== el.value) {
     el.value = newDisplay
