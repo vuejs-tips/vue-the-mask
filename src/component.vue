@@ -5,7 +5,7 @@
 <script>
 import mask from './directive'
 import tokens from './tokens'
-import maskit from './maskit'
+import masker from './masker'
 
 export default {
   name: 'TheMask',
@@ -58,7 +58,7 @@ export default {
 
     refresh (value) {
       this.display = value
-      var value = maskit(value, this.mask, this.masked, this.tokens)
+      var value = masker(value, this.mask, this.masked, this.tokens)
       if (value !== this.lastValue) {
         this.lastValue = value
         this.$emit('input', value)

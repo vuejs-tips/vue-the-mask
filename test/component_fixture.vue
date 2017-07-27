@@ -1,6 +1,6 @@
 <template>
 <div>
-  <the-mask v-model="input" :mask="mask" :masked="masked" @input="log"></the-mask>
+  <the-mask type="tel" placeholder="cpf" v-model="input" :mask="masks" :masked="masked" @input="log"></the-mask>
   <p>
     {{input}}
   </p>
@@ -26,6 +26,11 @@ export default {
       input: '654321',
       masked: true,
       mask: '+1 (##) # ##.###%'
+    }
+  },
+  computed: {
+    masks () {
+      return this.mask.split('|')
     }
   },
   methods: {
