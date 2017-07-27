@@ -1,5 +1,6 @@
 export default function maskit (value, mask, masked = true, tokens) {
-  value = value || ""
+  value = value || ''
+  mask = mask || ''
   var iMask = 0
   var iValue = 0
   var output = ''
