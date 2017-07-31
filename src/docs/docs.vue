@@ -151,8 +151,6 @@
         <label>type</label>
         <select v-model="type">
           <option>text</option>
-          <option>email</option>
-          <option>number</option>
           <option>tel</option>
         </select>
       </div>
