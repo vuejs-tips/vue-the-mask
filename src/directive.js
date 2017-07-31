@@ -34,7 +34,9 @@ export default function (el, binding) {
     while (position < el.value.length && el.value.charAt(position-1) !== digit) {
       position++
     }
-    el.setSelectionRange(position, position)
+    if (el === document.activeElement) {
+      el.setSelectionRange(position, position)
+    }
     el.dispatchEvent(event('input'))
   }
 

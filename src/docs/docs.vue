@@ -166,7 +166,8 @@
 
 <script>
 import Field from './field'
-import TheMask from '../TheMask'
+import TheMask from '../component'
+
 export default {
   components: {Field, TheMask},
   data () {
