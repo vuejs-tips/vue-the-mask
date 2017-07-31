@@ -160,6 +160,14 @@
       <the-mask :mask="mask" :value="value" :type="type" :masked="masked" :placeholder="placeholder"></the-mask>
     </div>
     <pre>{{code}}</pre>
+
+    <h2>Directive Usage</h2>
+
+    <div class="field" v-mask="'##/##/####'">
+      <input type="tel" placeholder="dd/mm/yyyy" />
+    </div>
+    <pre>{{directive}}</pre>
+
   </div>
 </div>
 </template>
@@ -167,6 +175,7 @@
 <script>
 import Field from './field'
 import TheMask from '../component'
+import mask from '../directive'
 
 export default {
   components: {Field, TheMask},
@@ -185,13 +194,15 @@ export default {
       placeholder: 'test your mask here',
       mask: '#XSAa',
       value: '12TgB',
+      directive: `<input type="tel" v-mask="'##/##/####'" />`
     }
   },
   computed: {
     code () {
       return `<the-mask mask="${this.mask}" value="${this.value}" type="${this.type}" masked="${this.masked}" placeholder="${this.placeholder}"></the-mask>`
     }
-  }
+  },
+  directives: {mask}
 }
 </script>
 
