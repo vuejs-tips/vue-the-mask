@@ -15,7 +15,7 @@
     "e2e:start-fixture": "vue build ./test/fixture.vue --host 0.0.0.0",
     "e2e:start-selenium": "selenium-standalone start",
     "e2e:run": "nightwatch ./test/nightwatch.js",
-    "dev": "vue build --host 0.0.0.0 ./src/demo/demo.vue --config ./src/demo/build.config.js"
+    "dev": "vue build --host 0.0.0.0 ./src/docs/docs.vue --config ./src/docs/build.config.js"
   },
   "files": [
     "dist/"
