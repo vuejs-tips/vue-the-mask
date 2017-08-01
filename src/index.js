@@ -1,19 +1,23 @@
-const tokens = require('./tokens')
-const mask = require('./directive')
-const TheMask = require('./component.vue')
+import tokens from './tokens'
+import mask from './directive'
+import TheMask from './component.vue'
 
-TheMask.tokens = tokens
-TheMask.mask = mask
-TheMask.install = function (Vue) {
+function install (Vue) {
   Vue.component(TheMask.name, TheMask)
   Vue.directive('mask', mask)
 }
 
-TheMask.version = proccess.env.VERSION
+const version = proccess.env.VERSION
 
-module.exports = TheMask
+export default install
+export {
+  TheMask,
+  mask,
+  tokens,
+  version
+}
 
 // Install by default if included from script tag
 if (typeof window !== 'undefined' && window.Vue) {
-  window.Vue.use(TheMask)
+  window.Vue.use(install)
 }
