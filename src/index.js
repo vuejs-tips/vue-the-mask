@@ -1,5 +1,5 @@
 const tokens = require('./tokens')
-const Mask = require('./directive')
+const mask = require('./directive')
 const TheMask = require('./component.vue')
 
 TheMask.tokens = tokens
