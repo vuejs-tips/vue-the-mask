@@ -3,7 +3,6 @@ import src_tokens from '../src/tokens'
 import src_mask from '../src/directive'
 
 const VueTheMask = require('../dist/vue-the-mask')
-console.log(VueTheMask)
 
 test('TheMask is not default', () => {
   expect(TheMask.name).toBe('TheMask')
