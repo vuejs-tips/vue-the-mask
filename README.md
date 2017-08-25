@@ -28,9 +28,18 @@ Vue.use(VueTheMask)
 ### Local (inside the component)
 
 ```javascript
-import TheMask from 'vue-the-mask'
+import {TheMask} from 'vue-the-mask'
 export default {
   components: {TheMask}
+}
+```
+
+### Local (as directive)
+
+```javascript
+import {mask} from 'vue-the-mask'
+export default {
+  directives: {mask}
 }
 ```
 
@@ -52,7 +61,7 @@ export default {
 | Property    | Required | Type                    | Default | Description                                |
 |-------------|----------|-------------------------|---------|--------------------------------------------|
 | value       | false    | String                  |         | Input value or v-model                     |
-| mask        | **true** | String, Function, Array |         | Mask pattern                               |
+| mask        | **true** | String, Array           |         | Mask pattern                               |
 | masked      | false    | Boolean                 | false   | emit value with mask chars, default is raw |
 | placeholder | false    | String                  |         | Same as html input                         |
 | type        | false    | String                  | 'text'  | Input type (email, tel, number, ...)       |

@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import TheMask from '../TheMask.vue'
+import TheMask from '../component.vue'
 export default {
   components: {TheMask},
   props: ['label', 'mask', 'placeholder', 'masked', 'type', 'tokens', 'value'],

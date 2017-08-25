@@ -40,10 +40,16 @@ npm i -S vue-the-mask
 import VueTheMask from 'vue-the-mask'
 Vue.use(VueTheMask)
 
-// Local
-import TheMask from 'vue-the-mask'
+// Local Component
+import {TheMask} from 'vue-the-mask'
 export default {
   components: {TheMask}
+}
+
+// Local Directive
+import {mask} from 'vue-the-mask'
+export default {
+  directives: {mask}
 }
 </code></pre></p>
 
@@ -56,7 +62,7 @@ export default {
         </thead>
         <tbody>
           <tr> <td>value</td> <td>false</td> <td>String</td> <td></td> <td>Input value or v-model</td> </tr>
-          <tr> <td><b>mask</b></td> <td><b>true</b></td> <td>String, Function, Array</td> <td></td> <td>Mask pattern</td> </tr>
+          <tr> <td><b>mask</b></td> <td><b>true</b></td> <td>String, Array</td> <td></td> <td>Mask pattern</td> </tr>
           <tr> <td>masked</td> <td>false</td> <td>Boolean</td> <td>false</td> <td>emit value with mask chars, default is raw</td> </tr>
           <tr> <td>placeholder</td> <td>false</td> <td>String</td> <td></td> <td>Same as html input</td> </tr>
           <tr> <td>type</td> <td>false</td> <td>String</td> <td>'text'</td> <td>Input type (email, tel, number, ...)</td> </tr>

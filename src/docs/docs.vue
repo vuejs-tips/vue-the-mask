@@ -168,6 +168,10 @@
     </div>
     <pre>{{directive}}</pre>
 
+    <div class="ui tertiary inverted red segment">
+      The value returned from directive is always masked!
+    </div>
+
   </div>
 </div>
 </template>

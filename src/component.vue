@@ -12,7 +12,7 @@ export default {
   props: {
     value: [String, Number],
     mask: {
-      type: [String, Function, Array],
+      type: [String, Array],
       required: true
     },
     masked: { // by default emits the value unformatted, change to true to format with the mask

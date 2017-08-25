@@ -1,9 +1,10 @@
 {
   "name": "vue-the-mask",
-  "version": "0.11.0-alpha.2",
+  "version": "0.11.0-beta",
   "description": "Tiny (2KB) and dependency free mask input for Vue.js",
   "main": "dist/vue-the-mask.js",
   "scripts": {
+    "size": "size-limit",
     "upgrade:check": "ncu",
     "upgrade:apply": "ncu -a",
     "build": "vue build ./src/index.js --config ./build.config.js --dist ./dist/ --prod --lib",
@@ -34,14 +35,21 @@
       ".*\\.(vue)$": "<rootDir>/node_modules/jest-vue-preprocessor"
     }
   },
+    "size-limit": [
+    {
+      "path": "dist/vue-the-mask.js",
+      "limit": "1.5 KB"
+    }
+  ],
   "author": "Marcos Neves <marcos.neves@gmail.com> (https://vuejs-tips.github.io/)",
   "license": "MIT",
   "devDependencies": {
     "babel-jest": "^20.0.3",
-    "babel-preset-vue-app": "^1.2.0",
+    "babel-preset-vue-app": "^1.2.1",
     "jest": "^20.0.4",
     "nightwatch": "^0.9.16",
     "npm-check-updates": "^2.12.1",
+    "size-limit": "^0.10.0",
     "vue": "^2.4.2",
     "vue-template-compiler": "^2.4.2"
   }
