@@ -35,7 +35,7 @@
       ".*\\.(vue)$": "<rootDir>/node_modules/jest-vue-preprocessor"
     }
   },
-    "size-limit": [
+  "size-limit": [
     {
       "path": "dist/vue-the-mask.js",
       "limit": "1.5 KB"
@@ -47,10 +47,12 @@
     "babel-jest": "^20.0.3",
     "babel-preset-vue-app": "^1.2.1",
     "jest": "^20.0.4",
+    "jest-vue-preprocessor": "^1.1.0",
     "nightwatch": "^0.9.16",
     "npm-check-updates": "^2.12.1",
     "size-limit": "^0.10.0",
     "vue": "^2.4.2",
-    "vue-template-compiler": "^2.4.2"
+    "vue-template-compiler": "^2.4.2",
+    "vue-template-es2015-compiler": "^1.5.3"
   }
 }

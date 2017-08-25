@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import TheMaskTemplate from '../src/TheMask.vue'
+import TheMaskTemplate from '../src/component.vue'
 import directive from '../src/directive'
 
 var TheMaskComponent = Vue.extend(TheMaskTemplate)
