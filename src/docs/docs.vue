@@ -164,7 +164,7 @@
     <h2>Directive Usage</h2>
 
     <div class="field" v-mask="'##/##/####'">
-      <input type="tel" placeholder="dd/mm/yyyy" />
+      <input type="date" placeholder="dd/mm/yyyy" />
     </div>
     <pre>{{directive}}</pre>
 
