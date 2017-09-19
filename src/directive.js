@@ -27,7 +27,7 @@ export default function (el, binding) {
   }
 
   el.oninput = function (evt) {
-    if (!evt.isTrusted) return // avoid infinite loop
+    //if (!evt.isTrusted) return // avoid infinite loop
     /* other properties to try to diferentiate InputEvent of Event (custom)
     InputEvent (native)
       cancelable: false
