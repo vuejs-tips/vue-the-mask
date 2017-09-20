@@ -42,7 +42,7 @@ export default function (el, binding) {
       isTrusted: false
     */
     // by default, keep cursor at same position as before the mask
-    try {
+
       var position = el.selectionEnd
       // save the character just inserted
       var digit = el.value[position - 1]
@@ -56,10 +56,10 @@ export default function (el, binding) {
           el.setSelectionRange(position, position)
         }, 0);
       }
-      el.dispatchEvent(event('input'))
-    } catch (e) {
-      return;
-    }
+      if (evt.isTrusted){
+        el.dispatchEvent(event('input'));
+      }
+    
   }
 
   var newDisplay = masker(el.value, config.mask, true, config.tokens)
