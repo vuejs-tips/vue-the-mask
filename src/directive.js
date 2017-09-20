@@ -2,7 +2,7 @@ import masker from './masker'
 import tokens from './tokens'
 
 // https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events#The_old-fashioned_way
-function event (name) {
+function event(name) {
   var evt = document.createEvent('Event')
   evt.initEvent(name, true, true)
   return evt
@@ -27,7 +27,7 @@ export default function (el, binding) {
   }
 
   el.oninput = function (evt) {
-    if (!evt.isTrusted) return // avoid infinite loop
+    //if (!evt.isTrusted) return // avoid infinite loop
     /* other properties to try to diferentiate InputEvent of Event (custom)
     InputEvent (native)
       cancelable: false
@@ -42,18 +42,24 @@ export default function (el, binding) {
       isTrusted: false
     */
     // by default, keep cursor at same position as before the mask
-    var position = el.selectionEnd
-    // save the character just inserted
-    var digit = el.value[position-1]
-    el.value = masker(el.value, config.mask, true, config.tokens)
-    // if the digit was changed, increment position until find the digit again
-    while (position < el.value.length && el.value.charAt(position-1) !== digit) {
-      position++
-    }
-    if (el === document.activeElement) {
-      el.setSelectionRange(position, position)
-    }
-    el.dispatchEvent(event('input'))
+
+      var position = el.selectionEnd
+      // save the character just inserted
+      var digit = el.value[position - 1]
+      el.value = masker(el.value, config.mask, true, config.tokens)
+      // if the digit was changed, increment position until find the digit again
+      while (position < el.value.length && el.value.charAt(position - 1) !== digit) {
+        position++
+      }
+      if (el === document.activeElement) {
+        setTimeout(() => {
+          el.setSelectionRange(position, position)
+        }, 0);
+      }
+      if (evt.isTrusted){
+        el.dispatchEvent(event('input'));
+      }
+    
   }
 
   var newDisplay = masker(el.value, config.mask, true, config.tokens)
