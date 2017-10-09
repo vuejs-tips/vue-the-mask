@@ -52,6 +52,9 @@ export default function (el, binding) {
     }
     if (el === document.activeElement) {
       el.setSelectionRange(position, position)
+      setTimeout(function () {
+        el.setSelectionRange(position, position)
+      }, 0)
     }
     el.dispatchEvent(event('input'))
   }
