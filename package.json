@@ -1,6 +1,6 @@
 {
   "name": "vue-the-mask",
-  "version": "0.11.0",
+  "version": "0.11.1",
   "description": "Tiny (2KB) and dependency free mask input for Vue.js",
   "main": "dist/vue-the-mask.js",
   "scripts": {
@@ -19,7 +19,9 @@
     "dev": "vue build --host 0.0.0.0 ./src/docs/docs.vue --config ./src/docs/build.config.js"
   },
   "files": [
-    "dist/"
+    "dist/",
+    "src/*.js",
+    "src/*.vue"
   ],
   "keywords": [
     "vue",
