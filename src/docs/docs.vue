@@ -172,6 +172,9 @@
       The value returned from directive is always masked!
     </div>
 
+    <div class="ui tertiary inverted orange segment">
+      When possible, prefer to use input type="tel" to avoid glitch on android devices
+    </div>
   </div>
 </div>
 </template>
