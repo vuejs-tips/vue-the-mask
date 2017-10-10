@@ -38,7 +38,7 @@
   "size-limit": [
     {
       "path": "dist/vue-the-mask.js",
-      "limit": "1.5 KB"
+      "limit": "1.51 KB"
     }
   ],
   "author": "Marcos Neves <marcos.neves@gmail.com> (https://vuejs-tips.github.io/)",
