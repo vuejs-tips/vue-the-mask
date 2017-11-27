@@ -53,7 +53,7 @@
     <div class="equal width fields">
       <div class="field">
         <label>IBAN {{iban}}</label>
-        <the-mask mask="AA## #### #### #### #### #### ###" v-model="iban" :masked="masked"></the-mask>
+        <the-mask mask="AA## XXXX XXXX XXXX XXXX XXXX XXXX XXXX XX" v-model="iban" :masked="masked"></the-mask>
       </div>
 
       <div class="field">
