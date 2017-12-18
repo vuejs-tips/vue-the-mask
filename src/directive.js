@@ -10,6 +10,7 @@ function event (name) {
 
 export default function (el, binding) {
   var config = binding.value
+  var oldValue = ''
   if (Array.isArray(config) || typeof config === 'string') {
     config = {
       mask: config,
@@ -53,7 +54,13 @@ export default function (el, binding) {
     if (el === document.activeElement) {
       el.setSelectionRange(position, position)
       setTimeout(function () {
+        // account for the caret jumping backwards, see issue #49
+        // by substracting Math.sign, we decrement the absolute value by 1
+        let lengthDiff = (el.value.length - oldValue.length);
+        lengthDiff = lengthDiff - Math.sign(lengthDiff)
+        position = position + lengthDiff
         el.setSelectionRange(position, position)
+        oldValue = el.value
       }, 0)
     }
     el.dispatchEvent(event('input'))
