@@ -1,5 +1,5 @@
 <template>
-<input type="text" v-mask="config" :value="display" @input="onInput" />
+<input type="text" v-mask="config" :value="display" @input="onInput" :disabled="disabled"  />
 </template>
 
 <script>
@@ -22,6 +22,10 @@ export default {
     tokens: {
       type: Object,
       default: () => tokens
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
   },
   directives: {mask},
