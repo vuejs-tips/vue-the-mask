@@ -16,7 +16,7 @@ or
 npm i -S vue-the-mask
 ```
 
-## Usage (two flavors)
+## Usage
 
 ### Global
 
@@ -41,6 +41,14 @@ import {mask} from 'vue-the-mask'
 export default {
   directives: {mask}
 }
+```
+
+### UMD (as directive)
+
+```javascript
+<script>
+  Vue.directive('mask', VueTheMask.TheMask.directives.mask);
+</script>
 ```
 
 ## Tokens
