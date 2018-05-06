@@ -9,13 +9,25 @@ function event (name) {
 }
 
 export default function (el, binding) {
-  var config = binding.value
-  if (Array.isArray(config) || typeof config === 'string') {
-    config = {
-      mask: config,
-      tokens: tokens
-    }
-  }
+	let config = binding.value;
+	
+	// If binding.value is an array/string (meaning - the binding value is just the mask)
+	// set him as mask and add basic tokens
+	if (Array.isArray(config) || typeof config === 'string') {
+		config = {
+			mask: config,
+			tokens: tokens
+		}
+	}
+	// If binding.value is an object(meaning - a full config)
+	// merge in the base tokens
+	else if (typeof config === 'object') {
+		Object.assign(tokens,config.tokens);
+	}
+	// If it's none of those(a boolean/null/undefined) throw an error
+	else {
+		throw new Error("Invalid input entered");
+	}
 
   if (el.tagName.toLocaleUpperCase() !== 'INPUT') {
     var els = el.getElementsByTagName('input')
