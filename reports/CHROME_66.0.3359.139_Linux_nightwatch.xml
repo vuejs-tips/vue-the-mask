@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="1">
+
+  <testsuite name="nightwatch"
+    errors="0" failures="0" hostname="" id="" package="nightwatch" skipped="0"
+    tests="1" time="1.672" timestamp="Sat, 12 May 2018 03:21:36 GMT">
+  
+    <testcase name="keyboard interactions" classname="nightwatch" time="1.672" assertions="8">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>
