@@ -380,7 +380,7 @@ function directive_event(name) {
 
   }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-1d380615","hasScoped":false,"optionsId":"1","buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/component.vue
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-1d380615","hasScoped":false,"optionsId":"0","buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/component.vue
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('input',{directives:[{name:"mask",rawName:"v-mask",value:(_vm.config),expression:"config"}],attrs:{"type":"text"},domProps:{"value":_vm.display},on:{"input":_vm.onInput}})}
 var staticRenderFns = []
 
@@ -524,7 +524,6 @@ function install(Vue) {
   Vue.directive('mask', directive);
 }
 
-const version = proccess.env.VERSION;
 /* harmony default export */ var src = (install);
  // Install by default if included from script tag
 
@@ -535,7 +534,6 @@ if (typeof window !== 'undefined' && window.Vue) {
 /* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "TheMask", function() { return src_component; });
 /* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "mask", function() { return directive; });
 /* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "tokens", function() { return src_tokens; });
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "version", function() { return version; });
 
 
 /* harmony default export */ var entry_lib = __webpack_exports__["default"] = (src);
@@ -545,4 +543,4 @@ if (typeof window !== 'undefined' && window.Vue) {
 /***/ })
 
 /******/ })["default"];
-//# sourceMappingURL=vue-the-mask.common.js.map
+//# sourceMappingURL=VueTheMask.common.js.map

@@ -1,4 +1,4 @@
-import install, {TheMask, tokens, mask, version} from '../dist/vue-the-mask'
+import install, { TheMask, tokens, mask, version } from '../dist/vue-the-mask'
 import src_tokens from '../src/tokens'
 import src_mask from '../src/directive'
 
@@ -18,8 +18,4 @@ test('TheMask.mask has directive', () => {
 
 test('install', () => {
   expect(typeof install).toBe('function')
-})
-
-test('version', () => {
-  expect(version).toBe(require('../package.json').version)
 })

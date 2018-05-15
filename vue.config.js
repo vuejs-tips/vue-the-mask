@@ -1,3 +1,8 @@
 module.exports = {
-  productionSourceMap: false
+  productionSourceMap: false,
+  configureWebpack: {
+    output: {
+      globalObject: "typeof self !== 'undefined' ? self : this"
+    }
+  }
 }
