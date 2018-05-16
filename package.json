@@ -7,26 +7,34 @@
     "size": "size-limit",
     "upgrade:check": "ncu",
     "upgrade:apply": "ncu -a",
-    "build":
-      "vue build -t lib -n VueTheMask src && cp dist/VueTheMask.umd.min.js dist/vue-the-mask.js",
+    "build": "vue build -t lib -n VueTheMask src && cp dist/VueTheMask.umd.min.js dist/vue-the-mask.js",
     "docs:build": "cd src/docs && vue build -d ../../docs/",
     "docs:serve": "serve ./",
     "start": "yarn dev",
     "test": "cypress run --dev --record false",
-    "ci":
-      "start-server-and-test e2e:start-fixture http://localhost:8080 cypress:open",
+    "ci": "start-server-and-test e2e:start-fixture http://localhost:8080 cypress:open",
     "cypress:open": "cypress open",
-    "e2e:install-global-dependencies":
-      "yarn global add selenium-standalone@latest && selenium-standalone install",
+    "e2e:install-global-dependencies": "yarn global add selenium-standalone@latest && selenium-standalone install",
     "e2e:start-fixture": "vue serve ./test/fixture.vue",
     "e2e:start-selenium": "selenium-standalone start",
     "e2e:run": "nightwatch ./test/nightwatch.js",
     "dev": "cd src/docs && vue serve"
   },
-  "files": ["dist/", "src/*.js", "src/*.vue"],
-  "keywords": ["vue", "mask"],
+  "files": [
+    "dist/",
+    "src/*.js",
+    "src/*.vue"
+  ],
+  "keywords": [
+    "vue",
+    "mask"
+  ],
   "jest": {
-    "moduleFileExtensions": ["js", "json", "vue"],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
     "transform": {
       "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
       ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
@@ -38,29 +46,37 @@
       "limit": "1.55 KB"
     }
   ],
-  "author":
-    "Marcos Neves <marcos.neves@gmail.com> (https://vuejs-tips.github.io/)",
+  "author": "Marcos Neves <marcos.neves@gmail.com> (https://vuejs-tips.github.io/)",
   "license": "MIT",
   "babel": {
     "env": {
       "test": {
-        "presets": ["env"]
+        "presets": [
+          "env"
+        ]
       },
       "production": {
-        "presets": ["@vue/app"]
+        "presets": [
+          "@vue/app"
+        ]
       }
     }
   },
   "eslintConfig": {
     "root": true,
-    "extends": ["plugin:vue/essential", "eslint:recommended"]
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ]
   },
   "postcss": {
     "plugins": {
       "autoprefixer": {}
     }
   },
-  "browserslist": ["last 2 chrome versions"],
+  "browserslist": [
+    "last 2 chrome versions"
+  ],
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-beta.10",
     "@vue/cli-plugin-eslint": "^3.0.0-beta.10",
@@ -75,6 +91,7 @@
     "npmlog": "4.1.2",
     "serve": "^6.5.7",
     "size-limit": "^0.18.0",
+    "testcafe": "^0.20.0",
     "vue": "^2.5.16",
     "vue-jest": "^2.5.0",
     "vue-loader": "^14.2.2",

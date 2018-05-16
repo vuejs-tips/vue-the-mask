@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
-    <title></title>
-  </head>
-  <body>
-    <h1>Test</h1>
-    <div id="app">
-      <the-mask mask="###.###.###-##"></the-mask>
-    </div>
-    <script src="https://unpkg.com/vue@2.2.6"></script>
-    <script src="/dist/vue-the-mask.js"></script>
-    <script>
-      new Vue({el: '#app'})
-    </script>
-  </body>
+
+<head>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+</head>
+
+<body>
+  <div id="app">
+    <the-mask id="input" mask="+1 ##.##.###)" @input.native="updateCursor" @keyup.native="updateCursor"></the-mask>
+    <input id="input2" @input="updateCursor2" @keypress="updateCursor2" @keydown="updateCursor2" @keyup="updateCursor2">
+    <span id="cursor">{{cursor}}</span>
+  </div>
+  <script src="../node_modules/vue/dist/vue.js"></script>
+  <script src="../dist/vue-the-mask.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: () => ({ cursor: 0 }),
+      methods: {
+        updateCursor($event) {
+          this.cursor = $event.target.selectionEnd
+        },
+        updateCursor2($event) {
+          this.cursor = $event.target.selectionEnd
+        }
+      }
+    })
+  </script>
+</body>
+
 </html>
