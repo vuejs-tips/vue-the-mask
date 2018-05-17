@@ -9,7 +9,7 @@ function event (name) {
 }
 
 export default function (el, binding) {
-  var config = binding.value
+  var config = binding.value || {}
   if (Array.isArray(config) || typeof config === 'string') {
     config = {
       mask: config,
