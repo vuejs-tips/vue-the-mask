@@ -7,12 +7,14 @@
 
 <body>
   <div id="app">
-    <the-mask id="input" mask="+1 ##.##.###)" @input.native="updateCursor" @keyup.native="updateCursor"></the-mask>
-    <input id="input2" @input="updateCursor2" @keypress="updateCursor2" @keydown="updateCursor2" @keyup="updateCursor2">
-    <span id="cursor">{{cursor}}</span>
+    <!-- <the-mask id="input" mask="+1 ##.##.###)" @input.native="updateCursor" @keyup.native="updateCursor"></the-mask> -->
+    <input id="input" type="tel" v-mask="'+1 ##.##.###)'" @input="updateCursor" @keyup="updateCursor" />
+    <!-- <input id="input3" @input="updateCursor2" @keypress="updateCursor2" @keydown="updateCursor2" @keyup="updateCursor2"> -->
+    <input id="cursor" :value="cursor">
   </div>
   <script src="../node_modules/vue/dist/vue.js"></script>
-  <script src="../dist/vue-the-mask.js"></script>
+  <!-- <script src="../dist/vue-the-mask.js"></script> -->
+  <script src="../dist/VueTheMask.umd.js"></script>
   <script>
     new Vue({
       el: '#app',

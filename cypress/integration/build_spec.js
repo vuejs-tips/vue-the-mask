@@ -1,13 +1,13 @@
-const PATH = '/cypress/build-fixture.html'
+const PATH = '/test/index.html'
 
 describe('dist build test', function() {
   it('loads VueTheMask at window', function() {
-    const o = { delay: 500 }
+    const o = { delay: 1000 }
     cy
       .visit(PATH)
       .get('#input')
-      .type('0{leftarrow}1', o)
-      .then(input => console.log(input.get(0).selectionEnd))
+      .type('0{leftarrow}12{leftarrow}{backspace}98', o)
+      .then(input => console.log(input.get(0)))
     // .should('have.value', '+1 0')
     // .should('have.value', '+1 02')
     // .type('3', o)
