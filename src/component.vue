@@ -1,5 +1,5 @@
 <template>
-<input type="text" v-mask="config" :value="display" @input="onInput" />
+<input type="text" v-mask="config" :value="display" v-on="listeners" />
 </template>
 
 <script>
@@ -48,14 +48,18 @@ export default {
         tokens: this.tokens,
         masked: this.masked
       }
+    },
+    listeners () {
+      var self = this
+      return Object.assign({}, this.$listeners, {
+        input: function (e) {
+          if (e.isTrusted) return // ignore native event
+          self.refresh(e.target.value)
+        }
+      })
     }
   },
   methods: {
-    onInput (e) {
-      if (e.isTrusted) return // ignore native event
-      this.refresh(e.target.value)
-    },
-
     refresh (value) {
       this.display = value
       var value = masker(value, this.mask, this.masked, this.tokens)
