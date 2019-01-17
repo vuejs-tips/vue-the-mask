@@ -7,23 +7,23 @@
 
 <body>
   <div id="app">
-    <!-- <the-mask id="input" mask="+1 ##.##.###)" @input.native="updateCursor" @keyup.native="updateCursor"></the-mask> -->
-    <input id="input" type="tel" v-mask="'+1 ##.##.###)'" @input="updateCursor" @keyup="updateCursor" />
-    <!-- <input id="input3" @input="updateCursor2" @keypress="updateCursor2" @keydown="updateCursor2" @keyup="updateCursor2"> -->
-    <input id="cursor" :value="cursor">
+    <the-mask id="input2" mask="#.#####" @input.native="updateCursor" @keyup.native="updateCursor"></the-mask>
+    <input id="input" @input="updateCursor2" @keypress="updateCursor2" @keydown="updateCursor2" @keyup="updateCursor2">
+    <span id="cursor">{{cursor}}</span>
   </div>
   <script src="../node_modules/vue/dist/vue.js"></script>
-  <!-- <script src="../dist/vue-the-mask.js"></script> -->
-  <script src="../dist/VueTheMask.umd.js"></script>
+  <script src="../dist/vue-the-mask.js"></script>
   <script>
     new Vue({
       el: '#app',
       data: () => ({ cursor: 0 }),
       methods: {
         updateCursor($event) {
+          console.log('updateCursor', $event.type)
           this.cursor = $event.target.selectionEnd
         },
         updateCursor2($event) {
+          console.log('updateCursor2', $event.type, $event.target.selectionEnd)
           this.cursor = $event.target.selectionEnd
         }
       }
