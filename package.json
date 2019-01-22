@@ -7,7 +7,7 @@
     "size": "size-limit",
     "upgrade:check": "ncu",
     "upgrade:apply": "ncu -a",
-    "build": "vue build -t lib -n VueTheMask src && cp dist/VueTheMask.umd.min.js dist/vue-the-mask.js",
+    "build": "vue build -t lib -n VueTheMask src/index.js && cp dist/VueTheMask.umd.min.js dist/vue-the-mask.js",
     "docs:build": "cd src/docs && vue build -d ../../docs/",
     "docs:serve": "serve ./",
     "start": "yarn dev",
