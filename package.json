@@ -7,16 +7,18 @@
     "size": "size-limit",
     "upgrade:check": "ncu",
     "upgrade:apply": "ncu -a",
-    "build": "vue build ./src/index.js --config ./build.config.js --dist ./dist/ --prod --lib",
-    "build:docs": "vue build ./src/docs/ --config ./src/docs/build.config.js --dist ./docs/ --prod",
+    "build": "vue build -t lib -n VueTheMask src && cp dist/VueTheMask.umd.min.js dist/vue-the-mask.js",
+    "docs:build": "cd src/docs && vue build -d ../../docs/",
     "docs:serve": "serve ./",
-    "compile": "npm run build -- --disable-compress",
-    "test": "jest",
+    "start": "yarn dev",
+    "test": "cypress run --dev --record false",
+    "ci": "start-server-and-test e2e:start-fixture http://localhost:8080 cypress:open",
+    "cypress:open": "cypress open",
     "e2e:install-global-dependencies": "yarn global add selenium-standalone@latest && selenium-standalone install",
-    "e2e:start-fixture": "vue build ./test/fixture.vue --host 0.0.0.0",
+    "e2e:start-fixture": "vue serve ./test/fixture.vue",
     "e2e:start-selenium": "selenium-standalone start",
     "e2e:run": "nightwatch ./test/nightwatch.js",
-    "dev": "vue build --host 0.0.0.0 ./src/docs/docs.vue --config ./src/docs/build.config.js"
+    "dev": "cd src/docs && vue serve"
   },
   "files": [
     "dist/",
@@ -30,31 +32,74 @@
   "jest": {
     "moduleFileExtensions": [
       "js",
+      "json",
       "vue"
     ],
     "transform": {
       "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
-      ".*\\.(vue)$": "<rootDir>/node_modules/jest-vue-preprocessor"
+      ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
     }
   },
   "size-limit": [
     {
-      "path": "dist/vue-the-mask.js",
-      "limit": "1.51 KB"
+      "path": "dist/vue-the-mask.umd.min.js",
+      "limit": "1.55 KB"
     }
   ],
   "author": "Marcos Neves <marcos.neves@gmail.com> (https://vuejs-tips.github.io/)",
   "license": "MIT",
+  "babel": {
+    "env": {
+      "test": {
+        "presets": [
+          "env"
+        ]
+      },
+      "production": {
+        "presets": [
+          "@vue/app"
+        ]
+      }
+    }
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ]
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "last 2 chrome versions"
+  ],
   "devDependencies": {
-    "babel-jest": "^21.2.0",
-    "babel-preset-vue-app": "^1.3.1",
-    "jest": "^21.2.1",
-    "jest-vue-preprocessor": "^1.2.0",
-    "nightwatch": "^0.9.16",
-    "npm-check-updates": "^2.13.0",
-    "size-limit": "^0.11.6",
-    "vue": "^2.4.4",
-    "vue-template-compiler": "^2.4.4",
-    "vue-template-es2015-compiler": "^1.5.3"
+    "@vue/cli-plugin-babel": "^3.0.0-beta.10",
+    "@vue/cli-plugin-eslint": "^3.0.0-beta.10",
+    "@vue/cli-service": "^3.0.0-beta.10",
+    "babel-jest": "^22.4.3",
+    "babel-preset-vue-app": "^2.0.0",
+    "codeceptjs-puppeteer": "^1.2.0",
+    "cypress": "^2.1.0",
+    "jest": "^22.4.3",
+    "jest-serializer-vue": "^1.0.0",
+    "nightwatch": "^0.9.21",
+    "npm-check-updates": "^2.14.2",
+    "npmlog": "4.1.2",
+    "puppeteer": "^1.4.0",
+    "serve": "^6.5.7",
+    "size-limit": "^0.18.0",
+    "testcafe": "^0.20.0",
+    "vue": "^2.5.16",
+    "vue-jest": "^2.5.0",
+    "vue-loader": "^14.2.2",
+    "vue-template-compiler": "^2.5.16"
+  },
+  "dependencies": {
+    "start-server-and-test": "^1.4.1"
   }
 }
