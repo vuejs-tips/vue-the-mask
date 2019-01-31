@@ -18,7 +18,8 @@ export default function (el, binding) {
   if (Array.isArray(config) || typeof config === 'string') {
     config = {
       mask: config,
-      tokens: tokens
+      tokens: tokens,
+      masked: false
     }
   }
   config = Object.assign({}, defaults, config)
