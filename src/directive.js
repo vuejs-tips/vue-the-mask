@@ -10,12 +10,18 @@ function event (name) {
 
 export default function (el, binding) {
   var config = binding.value
+  var defaults = {
+    tokens: tokens,
+    masked: true
+  }
   if (Array.isArray(config) || typeof config === 'string') {
     config = {
       mask: config,
       tokens: tokens
     }
   }
+  config = Object.assign({}, defaults, config)
+  
 
   if (el.tagName.toLocaleUpperCase() !== 'INPUT') {
     var els = el.getElementsByTagName('input')
@@ -59,7 +65,7 @@ export default function (el, binding) {
     el.dispatchEvent(event('input'))
   }
 
-  var newDisplay = masker(el.value, config.mask, true, config.tokens)
+  var newDisplay = masker(el.value, config.mask, config.masked, config.tokens)
   if (newDisplay !== el.value) {
     el.value = newDisplay
     el.dispatchEvent(event('input'))
