@@ -9,6 +9,7 @@ function event (name) {
 }
 
 export default function (el, binding) {
+  console.log('binidng value', binding.value)
   var config = binding.value
   var defaults = {
     tokens: tokens,
@@ -21,6 +22,7 @@ export default function (el, binding) {
     }
   }
   config = Object.assign({}, defaults, config)
+  console.log('after defaults', config)
   
 
   if (el.tagName.toLocaleUpperCase() !== 'INPUT') {
