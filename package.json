@@ -75,7 +75,9 @@
     }
   },
   "browserslist": [
-    "last 2 chrome versions"
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 11"
   ],
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-beta.10",
