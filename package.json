@@ -1,13 +1,13 @@
 {
   "name": "vue-the-mask",
-  "version": "0.11.1",
+  "version": "0.12.0",
   "description": "Tiny (2KB) and dependency free mask input for Vue.js",
   "main": "dist/vue-the-mask.js",
   "scripts": {
     "size": "size-limit",
     "upgrade:check": "ncu",
     "upgrade:apply": "ncu -a",
-    "build": "vue build -t lib -n VueTheMask src && cp dist/VueTheMask.umd.min.js dist/vue-the-mask.js",
+    "build": "vue build -t lib -n VueTheMask src/index.js && cp dist/VueTheMask.umd.min.js dist/vue-the-mask.js",
     "docs:build": "cd src/docs && vue build -d ../../docs/",
     "docs:serve": "serve ./",
     "start": "yarn dev",
@@ -75,7 +75,9 @@
     }
   },
   "browserslist": [
-    "last 2 chrome versions"
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 11"
   ],
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-beta.10",
