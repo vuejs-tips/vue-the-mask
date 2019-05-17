@@ -1,5 +1,11 @@
 <template>
-<input type="text" v-mask="config" :value="display" @input="onInput" />
+  <input
+    type="text"
+    v-mask="config"
+    :value="display"
+    v-bind="$attrs"
+    v-on="listeners"
+  />
 </template>
 
 <script>
@@ -48,6 +54,17 @@ export default {
         tokens: this.tokens,
         masked: this.masked
       }
+    },
+    listeners () {
+      var vm = this
+      return Object.assign({},
+        vm.$listeners,
+        {
+          input(e) {
+            vm.onInput(e)
+          }
+        }
+      )
     }
   },
   methods: {
