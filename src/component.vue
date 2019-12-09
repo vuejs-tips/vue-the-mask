@@ -62,6 +62,8 @@ export default {
       if (value !== this.lastValue) {
         this.lastValue = value
         this.$emit('input', value)
+      }else {
+          this.$emit('error', "value is not valid")
       }
     }
   }
