@@ -1,5 +1,5 @@
 <template>
-<input type="text" v-mask="config" :value="display" @input="onInput" />
+<input type="text" v-mask="config" :value="display" @input="onInput" @focus="$emit('focus')" @blur="$emit('blur')" />
 </template>
 
 <script>
