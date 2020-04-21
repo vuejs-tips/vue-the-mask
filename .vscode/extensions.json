@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "EditorConfig.EditorConfig",
+    "pflannery.vscode-versionlens",
+    "octref.vetur",
+    "eamodio.gitlens"
+  ]
+}
