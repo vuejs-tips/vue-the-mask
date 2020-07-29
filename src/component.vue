@@ -34,7 +34,7 @@ export default {
   watch : {
     value (newValue) {
       if (newValue !== this.lastValue) {
-        this.display = newValue
+        this.lastValue = this.display = newValue
       }
     },
     masked () {
@@ -56,13 +56,16 @@ export default {
       this.refresh(e.target.value)
     },
 
-    refresh (value) {
-      this.display = value
-      var value = masker(value, this.mask, this.masked, this.tokens)
-      if (value !== this.lastValue) {
-        this.lastValue = value
-        this.$emit('input', value)
+    refresh (maskedValue) {
+      this.display = maskedValue  // imitating v-model
+      let value = maskedValue
+
+      if (!this.masked) {
+        value = masker(value, this.mask, false, this.tokens)
       }
+
+      this.lastValue = value
+      this.$emit('input', value)
     }
   }
 }
