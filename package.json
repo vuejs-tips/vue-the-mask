@@ -91,7 +91,7 @@
     "npm-check-updates": "^2.14.2",
     "npmlog": "4.1.2",
     "puppeteer": "^1.4.0",
-    "serve": "^6.5.7",
+    "serve": "^10.1.2",
     "size-limit": "^0.18.0",
     "testcafe": "^0.20.0",
     "vue": "^2.5.16",
