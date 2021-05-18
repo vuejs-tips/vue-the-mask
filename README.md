@@ -54,6 +54,12 @@ export default {
 '!': {escape: true}
 ```
 
+## Disable v-mask directive
+
+```
+<input type="tel" v-mask="null" />
+```
+
 ![The Mask Money](https://raw.githubusercontent.com/vuejs-tips/vue-the-mask/master/img/the-mask-hammer.gif)
 
 ## Properties
