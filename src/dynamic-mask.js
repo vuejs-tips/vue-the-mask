@@ -1,3 +1,5 @@
+import isNextMask from "./is-next-mask";
+
 export default function dynamicMask (maskit, masks, tokens) {
   masks = masks.sort((a, b) => a.length - b.length)
   return function (value, mask, masked = true) {
@@ -6,7 +8,7 @@ export default function dynamicMask (maskit, masks, tokens) {
       var currentMask = masks[i]
       i++
       var nextMask = masks[i]
-      if (! (nextMask && maskit(value, nextMask, true, tokens).length > currentMask.length) ) {
+      if (! (nextMask && isNextMask(value, currentMask, nextMask, tokens, maskit)) ) {
         return maskit(value, currentMask, masked, tokens)
       }
     }
