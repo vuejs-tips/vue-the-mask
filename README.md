@@ -99,7 +99,7 @@ We understand that money format is a totally different domain, which needs anoth
 
 ## Contribution
 
-You're free to contribute to this project by submitting [issues](https://github.com/vuejs-tips/v-tag-input.svg/issues) and/or [pull requests](https://github.com/vuejs-tips/v-tag-input.svg/pulls). This project is test-driven, so keep in mind that every change and new feature should be covered by tests. Your name will be added to the hall of fame ;)
+You're free to contribute to this project by submitting [issues](https://github.com/vuejs-tips/vue-the-mask/issues) and/or [pull requests](https://github.com/vuejs-tips/vue-the-mask/pulls). This project is test-driven, so keep in mind that every change and new feature should be covered by tests. Your name will be added to the hall of fame ;)
 
 ![The Mask Wolf](https://raw.githubusercontent.com/vuejs-tips/vue-the-mask/master/img/the-mask-wolf.gif)
 
