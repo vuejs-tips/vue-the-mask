@@ -167,6 +167,11 @@
       <input type="tel" placeholder="dd/mm/yyyy" />
     </div>
     <pre>{{directive}}</pre>
+    
+    <div class="field" v-mask="directiveMask">
+      <input type="tel" placeholder="987 BC" />
+    </div>
+    <pre>{{directiveAdvanced}}</pre>
 
     <div class="ui tertiary inverted red segment">
       The value returned from directive is always masked!
@@ -201,7 +206,25 @@ export default {
       placeholder: 'test your mask here',
       mask: '#XSAa',
       value: '12TgB',
-      directive: `<input type="tel" v-mask="'##/##/####'" />`
+      directive: `<input type="tel" v-mask="'##/##/####'" />`,
+      directiveMask: {
+        mask: "### YY",
+        tokens: {
+          Y: {
+            pattern: /[0-9A-C]/,
+          },
+          "#": { pattern: /\d/ },
+        },
+      }
+      directiveAdvanced: `<input type="tel" v-mask="{
+        mask: "### YY",
+        tokens: {
+          Y: {
+            pattern: /[0-9A-C]/,
+          },
+          "#": { pattern: /\d/ },
+        },
+      }" />`
     }
   },
   computed: {
