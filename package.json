@@ -48,6 +48,7 @@
   ],
   "author": "Marcos Neves <marcos.neves@gmail.com> (https://vuejs-tips.github.io/)",
   "license": "MIT",
+  "repository": "https://github.com/vuejs-tips/vue-the-mask",
   "babel": {
     "env": {
       "test": {
